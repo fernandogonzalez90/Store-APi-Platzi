@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Store-APi-Platzi';
+  buscarIs: boolean = false;
+
+  buscar(){
+    this.buscarIs = !this.buscarIs;
+  }
 }

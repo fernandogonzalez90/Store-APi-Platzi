@@ -1,22 +1,41 @@
-<div class="container mt-3">
+<div class="container mt-5" *ngIf="productos.length">
   <div class="row">
-      <div class="col-xs-12 col-sm-6  col-md-4 d-flex justify-content-around pt-3" *ngFor="let producto of productos">
-          <div class="card shadow border-0 mb-5 " style="width: 18rem;">
-              <img [src]='producto.images[0]' height="200" width="300" class="card-img-top" alt="...">
-              <div class="card-body">
-                  <h5 class="card-title text-secondary">{{producto.title}}</h5>
-                  <p class="card-text text-secondary">{{producto.description}}</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                  <li class="list-group-item text-secondary"><b>Publicado:</b> {{producto.creationAt | date: 'shortDate'}}</li>
-                  <li class="list-group-item text-secondary"><b>Actualizado: </b>{{producto.updatedAt | date: 'shortDate'}}</li>
-                  <li class="list-group-item float-right text-secondary"><b>Categoria: </b>{{producto.category.name}}</li>
-              </ul>
-              <div class="card-footer d-flex justify-content-around bg-secondary">
-                <span class="fw-bold text-light">${{producto.price}}</span>
-                <a href="#" class="text-light text-decoration-none"><i class="fa-solid fa-cart-plus"></i></a>
-              </div>
-          </div>
+    <div
+      class="col-xs-12 col-sm-6 col-md-4 d-flex justify-content-around pt-3"
+      *ngFor="let producto of productos"
+    >
+      <div class="card shadow border-0 mb-5" style="width: 18rem">
+        <img
+          [ngSrc]="producto.images[0]"
+          height="200"
+          width="300"
+          class="card-img-top"
+          alt="{{producto.title}}"
+        />
+        <div class="card-body">
+          <h5 class="card-title text-secondary">{{ producto.title }}</h5>
+          <p class="card-text text-secondary">{{ producto.description }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item float-right text-secondary">
+            <b>Categoria: </b>{{ producto.category.name }}
+          </li>
+          <li class="list-group-item text-secondary">
+            <b>Publicado:</b> {{ producto.creationAt | date : "shortDate" }}
+          </li>
+          <li class="list-group-item text-secondary"><b>Precio: </b>${{ producto.price }}</li>
+        </ul>
+        <div class="card-footer d-flex justify-content-around bg-secondary">
+          <a href="#" class="text-light text-decoration-none fw-bold">ver <i class="fa-solid fa-eye"></i
+            ></a>
+          <a href="#" class="text-light text-decoration-none fw-bold"
+            > Añadir <i class="fa-solid fa-cart-plus"></i
+          ></a>
+        </div>
       </div>
+    </div>
   </div>
+</div>
+<div *ngIf="!productos.length">
+  <p class="text-center fs-2 text-secondary pt-5">Api Deshabilitada</p>
 </div>

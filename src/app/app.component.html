@@ -1,35 +1,66 @@
-<div class="nav-bar shadow">
-  <ul class="nav justify-content-center bg-dark">
-    <li class="nav-item">
-      <a class="nav-link text-secondary" aria-current="page" href="#">Sote <i class="fa-solid fa-store"></i></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link text-secondary" href="#">Filtrar <i class="fa-solid fa-filter"></i></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link text-secondary" (click)="buscar()" href="#"
-        >Buscar <i class="fa-solid fa-magnifying-glass"></i
-      ></a>
-    </li>
-    <!-- <li class="nav-item">
-      <a class="nav-link" aria-disabled="true">Disabled</a>
-    </li> -->
-  </ul>
-</div>
-<div class="container input-group p-3"  *ngIf="buscarIs">
-  <input
-    type="text"
-    class="form-control"
-    placeholder="Buscar producto"
-    aria-label="Recipient's username"
-    aria-describedby="button-addon2"
-  />
-  <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
+<div class="fixed-top">
+  <div class="nav-bar shadow py-2 bg-dark ">
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link text-secondary" aria-current="page" href="#">Store <i class="fa-solid fa-store"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-secondary" href="#">Filtrar <i class="fa-solid fa-filter"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-secondary" (click)="buscar()" href="#"
+          >Buscar <i class="fa-solid fa-magnifying-glass"></i
+        ></a>
+      </li>
+    </ul>
+  </div>
+  <div class="container-fluid p-3 bg-dark"  *ngIf="buscarIs">
+    <div class="row pb-2">
+      <div class="col">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Precio</option>
+          <option value="1">Menor Precio</option>
+          <option value="2">Mayor Precio</option>
+        </select>
+      </div>
+      <div class="col">
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Fecha</option>
+          <option value="1">Reciente</option>
+          <option value="2">Antiguo</option>
+        </select>
+      </div>
+    </div>
+    <div class="input-group">
+      <input
+      type="text"
+      class="form-control"
+      placeholder="Buscar producto"
+      aria-label="Recipient's username"
+      aria-describedby="button-addon2"
+    />
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    </div>
+  </div>
 </div>
 
 <!-- crea un input de busqueda. -->
 
 
+
 <app-store></app-store>
+
+
+<div class="container-fluid">
+  <footer class="d-flex flex-wrap justify-content-center  bg-dark py-2 border-top opacity-75 fixed-bottom">
+    <div class="col-md-4 d-flex ps-3">
+      <span class="text-light">Creado por <span><a href="https://devgonzalezf.netlify.app/" class="text-decoration-none fw-bold">Devgonzalezf</a></span></span>
+    </div>
+
+    <div>
+      <span class="text-light">Usa la API de <a href="https://fakeapi.platzi.com/" class="text-decoration-none pe-3 fw-bold">Platzi</a></span>
+    </div>
+  </footer>
+</div>

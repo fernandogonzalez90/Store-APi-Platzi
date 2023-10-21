@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreComponent } from './components/store/store.component';
 import { NgOptimizedImage } from '@angular/common';
+import { ViewProductoComponent } from './components/view-producto/view-producto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StoreComponent
+    StoreComponent,
+    ViewProductoComponent
   ],
   imports: [
     BrowserModule,

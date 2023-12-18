@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-view-producto',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-producto.component.css']
 })
 export class ViewProductoComponent {
+  id!: string;
 
+ constructor(private route: ActivatedRoute) { }
+
+ ngOnInit() {
+   this.id = this.route.snapshot.paramMap.get('id') ?? '';
+ }
 }

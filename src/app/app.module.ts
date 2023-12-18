@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { StoreComponent } from './components/store/store.component';
 import { NgOptimizedImage } from '@angular/common';
 import { ViewProductoComponent } from './components/view-producto/view-producto.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ViewProductoComponent } from './components/view-producto/view-producto.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

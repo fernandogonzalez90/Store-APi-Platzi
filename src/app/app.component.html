@@ -2,22 +2,20 @@
   <div class="nav-bar shadow py-2 bg-dark ">
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link text-secondary" aria-current="page" href="#">STORE 
+        <a class="nav-link text-light opacity-75" aria-current="page" href="#">STORE
           <i class="fa-solid fa-store"></i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-secondary" (click)="buscar()" href="#"
-          >BUSCAR 
-          <i class="fa-solid fa-magnifying-glass"></i
-        ></a>
+        <a class="nav-link text-light opacity-75" (click)="buscar()" href="#">BUSCAR
+          <i class="fa-solid fa-magnifying-glass"></i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-secondary" href="">CARRITO 
+        <a class="nav-link text-light opacity-75" href="">CARRITO
           <i class="fa-solid fa-cart-shopping"></i></a>
       </li>
     </ul>
   </div>
-  <div class="container-fluid p-3 bg-dark"  *ngIf="buscarIs">
+  <div class="container-fluid p-3 bg-dark" *ngIf="buscarIs">
     <div class="row pb-2">
       <div class="col">
         <select class="form-select" aria-label="Default select example">
@@ -35,16 +33,11 @@
       </div>
     </div>
     <div class="input-group">
-      <input
-      type="text"
-      class="form-control"
-      placeholder="Buscar producto"
-      aria-label="Recipient's username"
-      aria-describedby="button-addon2"
-    />
-    <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
+      <input type="text" class="form-control" placeholder="Buscar producto" aria-label="Recipient's username"
+        aria-describedby="button-addon2" />
+      <button class="btn btn-outline-light bg-primary" type="button" id="button-addon2">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
     </div>
   </div>
 </div>
@@ -56,8 +49,8 @@
 <app-store></app-store>
 
 
-<div class="container-fluid">
-  <footer class="d-flex flex-wrap justify-content-center  bg-dark py-2 border-top opacity-75 fixed-bottom">
+<!-- <div class="container-fluid">
+  <footer class="d-flex flex-wrap justify-content-center  bg-dark py-2 border-top fixed-bottom">
     <span class="text-light">Devgonzalezf no se hace cargo por el contenido enviado desde Platzi</span>
     <div class="col-md-4 d-flex ps-3">
       <span class="text-light">Creado por <span><a href="https://devgonzalezf.netlify.app/" class="text-decoration-none fw-bold">Devgonzalezf</a></span></span>
@@ -67,4 +60,4 @@
       <span class="text-light">Usa la API de <a href="https://fakeapi.platzi.com/" class="text-decoration-none pe-3 fw-bold">Platzi</a></span>
     </div>
   </footer>
-</div>
+</div> -->

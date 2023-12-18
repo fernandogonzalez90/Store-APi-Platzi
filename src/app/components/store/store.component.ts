@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -10,7 +11,8 @@ export class StoreComponent {
 productos: any[] = [];
 buscarIs: boolean = false;
   constructor(
-    private apiService: ApiService
+    private apiService: ApiService,
+    private router: Router,
   ){}
 
   ngOnInit() {
@@ -25,6 +27,10 @@ buscarIs: boolean = false;
     for(let producto of this.productos){
       console.log(producto)
     }
+  }
+
+  navegar(id: number){
+    this.router.navigate(['/producto',id]);
   }
 
 }
